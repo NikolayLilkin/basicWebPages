@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>    
+    <head>
+        <style>
+            *{
+                padding:0;
+                margin: 0;
+                text-decoration: none;
+                list-style: none;
+                box-sizing: border-box;
+            }
+            body{    
+                margin: 0px;
+                padding: 0px;
+                font-family: Lato,sans-serif;
+            }
+            header{
+                min-height: 75px;
+                width: 100%;
+                display: block;
+                background-color:rgb(238, 238, 238);
+                justify-content: space-around;
+                align-items: center;
+                font-family:Lato, "Lucida Grande", "Lucida Sans";
+                justify-content: center;
+                padding-left:20px;
+                padding-right:20px;
+                padding-top:20px;
+                font-size: 16px;
+            }
+            img{
+                display:block;
+                float: left;
+                max-width: 300px;
+            }
+            .nav_links{
+                float: right;
+            }
+            nav ul li{
+                display: inline-block;
+                margin: 0 40px;
+            }
+            #divEmail{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #email{
+                margin-top: 50px;
+                text-align: center;
+                margin-bottom: 20px;
+                word-wrap: break-word;
+            }
+            #email_input{
+                align-self: center;
+                width: 200px;
+                text-align: left;
+            }
+            #buttonEmail{
+                background-color:#f1c40f;
+                color: black;
+                max-width: 150px;
+                width: 100%;
+                height: 30px;
+                margin: 15px 0;
+                font-size: 1em;
+                font-weight: 900;
+                text-transform: uppercase;
+                border-radius: 2px;
+            }
+            #mainSection{
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                max-width: 700px;
+                width: 100%;
+                margin: 0 auto;
+            }
+            #PremiumMaterials{
+                margin-bottom: 20px;
+                display: grid;
+                grid-template-areas: 
+                "img heading"
+                "img paragraph";
+
+            }
+            #PremiumMaterialsH{
+                grid-area: heading;
+            }
+            #PremiumMaterialsP{
+                grid-area: paragraph;
+            }
+            #oil{
+                margin-right: 20px;
+                grid-area: img;
+                width: 70px;
+                height: 70px;
+            }
+            #FastShipping{
+                margin-bottom: 20px;
+                display: grid;
+                grid-template-areas: 
+                "img heading"
+                "img paragraph";
+            }
+            #FastShippingH{
+                grid-area: heading;
+            }
+            #FastShippingP{
+                grid-area:paragraph;
+            }
+            #FastShippingImg{
+                grid-area:img;
+                margin-right: 20px;
+                width: 70px;
+                height: 70px;
+            }
+            #QualityAssurance{
+                margin-bottom: 20px;
+                display: grid;
+                grid-template-areas: 
+                "img heading"
+                "img paragraph";
+            }
+            #QualityAssuranceH{
+                grid-area: heading;
+            }
+            #QualityAssuranceP{
+                grid-area:paragraph;
+            }
+            #QualityAssuranceImg{
+                margin-right: 20px;
+                grid-area:img;
+                width: 70px;
+                height: 70px;
+            }
+            iframe{
+                margin: 0 auto;
+                display: flex;
+                margin-bottom: 20px;
+            }
+            #Pricing{
+                display: flex;
+                flex-direction: row;
+                margin: 0 auto;
+            }
+            #TENOR{
+                text-align: center;
+                width: 300px;
+                height: 250px;
+                margin-left: 20px;
+                margin-right: 20px;
+                border: 1px solid #000;
+                border-radius: 3px;
+                margin-bottom: 10px;
+            }
+            #BASS{
+                text-align: center;
+                width: 300px;
+                height: 250px;
+                margin-left: 20px;
+                margin-right: 20px;
+                border: 1px solid #000;
+                border-radius: 3px;
+                margin-bottom: 15px;
+            }
+            #VALVE{
+                text-align: center;
+                width: 300px;
+                height: 250px;
+                margin-left: 20px;
+                margin-right: 20px;
+                border: 1px solid #000;
+                border-radius: 3px;
+                margin-bottom: 10px;
+            }
+            #Pricing h3{
+                background-color: #ddd;
+            }
+            .btn{
+                background-color:#f1c40f;
+                color: black;
+                padding: 0 20px;
+                height: 40px;
+                font-size: 1em;
+                font-weight: 900;
+                text-transform: uppercase;
+                border: 3px black solid;
+                border-radius: 2px; 
+                cursor: pointer;
+                margin-top: 50px;
+            }
+            footer{
+                width: 100%;
+                margin-top: 30px;
+                background-color: #ddd;
+                padding: 20px;
+            }
+            footer > ul{
+                display: flex;
+                justify-content: flex-end;
+            }
+            footer > ul > li{
+                padding: 0 10px;
+            }
+            footer > span{
+                margin-top: 5px;
+                display: flex;
+                justify-content: flex-end;
+                font-size: 0.9em;
+                color: #444;
+            }
+            li{
+                font-family: Lato, sans-serif;
+            }
+            
+        </style>
+        <title>
+
+        </title>
+    </head>
+<body>
+    <header>
+        <img id="header-img" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="original trombones logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a class="active" href="#mainSection">Features</a></li>
+                <li><a href="#Video">How it works</a></li>
+                <li><a href="#Pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="divEmail">
+        <h2 id="email">Handcrafted, home-made masterpieces</h2>
+        <label id="email_label"><input id="email_input" type="email" placeholder="Enter your email address"></label>
+        <button id="buttonEmail" type="submit">Get Started</button>
+        <div id="mainSection">
+            <div id="PremiumMaterials">
+                <img id="oil" src="/Users/nikolayanatolievlilkin/Downloads/oil.jpg">
+                <h3 id="PremiumMaterialsH">Premium Materials</h3>
+                <p id="PremiumMaterialsP">Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+            </div>
+            <div id="FastShipping">
+                <img id="FastShippingImg" src="/Users/nikolayanatolievlilkin/Downloads/shipped.png">
+                <h3 id="FastShippingH">Fast Shipping</h3>
+                <p id="FastShippingP">We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+            </div>
+            <div id="QualityAssurance">
+                <img id="QualityAssuranceImg" src="/Users/nikolayanatolievlilkin/Downloads/battery.png">
+                <h3 id="QualityAssuranceH">Quality Assurance</h3>
+                <p id="QualityAssuranceP">For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+            </div>
+        </div>
+        <div id="Video">    
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        </div>
+        <div id="Pricing">
+            <div id="TENOR"><h3>TENOR TROMBONE</h3><h2>$600</h2>
+                <ul>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ul>
+                <button class="btn">Select</button>
+            </div>
+            <div id="BASS"><h3>BASS TROMBONE</h3><h2>$900</h2>
+                <ul>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ul>
+                <button class="btn">Select</button>
+            </div>
+            <div id="VALVE"><h3>VALVE TROMBONE</h3><h2>$1200</h2>
+                <ul>
+                    <li>Plays similar to a Trumpet</li>
+                    <li>Great for Jazz Bands</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ul> 
+                <button class="btn">Select</button>
+            </div>
+        </div>
+        <footer>
+            <ul>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <span>Copyright 2016, Original Trombones</span>
+          </footer>   
+    </main>  
+</body>
+</html>
